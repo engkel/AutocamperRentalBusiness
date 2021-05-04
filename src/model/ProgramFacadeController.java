@@ -1,17 +1,22 @@
 package model;
 
-public class ProgramLogic {
-    private static ProgramLogic instance;
+/**
+ * This class acts as a root controller for the UI controllers. This class receives
+ * messages from the UI layer and performs checks and validation before delegating the
+ * requests to the domain classes.
+ */
+public class ProgramFacadeController {
+    private static ProgramFacadeController instance;
     private ReservationDao reservationDao;
 
 
-    private ProgramLogic(){
+    private ProgramFacadeController(){
         reservationDao = new ReservationDaoImpl();
     }
 
-    public static ProgramLogic getInstance(){
+    public static ProgramFacadeController getInstance(){
         if(instance == null){
-             instance = new ProgramLogic();
+             instance = new ProgramFacadeController();
         }
         return instance;
     }

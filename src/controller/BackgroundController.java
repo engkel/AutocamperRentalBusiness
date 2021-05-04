@@ -3,16 +3,15 @@ package controller;
 import javafx.event.Event;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
-import javafx.scene.Parent;
 import javafx.scene.layout.BorderPane;
 import javafx.scene.layout.StackPane;
 import model.Main;
-import model.ProgramLogic;
+import model.ProgramFacadeController;
 
 import java.io.IOException;
 
 public class BackgroundController {
-    private ProgramLogic pl = ProgramLogic.getInstance();
+    private ProgramFacadeController pl = ProgramFacadeController.getInstance();
 
     @FXML
     public BorderPane rootPane;

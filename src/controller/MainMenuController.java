@@ -2,10 +2,10 @@ package controller;
 
 import javafx.event.Event;
 import model.Main;
-import model.ProgramLogic;
+import model.ProgramFacadeController;
 
 public class MainMenuController {
-    private ProgramLogic pl = ProgramLogic.getInstance();
+    private ProgramFacadeController pl = ProgramFacadeController.getInstance();
 
 
     public void initialize(){

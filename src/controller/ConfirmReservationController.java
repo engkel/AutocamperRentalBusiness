@@ -4,10 +4,10 @@ import javafx.event.Event;
 import javafx.fxml.FXML;
 import javafx.scene.control.DatePicker;
 import javafx.scene.control.Label;
-import model.ProgramLogic;
+import model.ProgramFacadeController;
 
 public class ConfirmReservationController {
-    private ProgramLogic pl = ProgramLogic.getInstance();
+    private ProgramFacadeController pl = ProgramFacadeController.getInstance();
 
     @FXML
     public Label autocamperId;
