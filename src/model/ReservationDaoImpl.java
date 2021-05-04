@@ -1,5 +1,11 @@
 package model;
 
+
+/**
+ * A data access object implementation of for the reservation class. As the
+ * name implies, it uses the information of reservation objects to perform
+ * operations on the database.
+ */
 public class ReservationDaoImpl implements ReservationDao{
 
     public ReservationDaoImpl(){

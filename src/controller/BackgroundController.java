@@ -13,9 +13,19 @@ import java.io.IOException;
 public class BackgroundController {
     private ProgramFacadeController pl = ProgramFacadeController.getInstance();
 
+    /**
+     * The whole UI is based upon one borderpane
+     */
     @FXML
     public BorderPane rootPane;
 
+    /**
+     * The center pane, which will be changed when the user interacts with the app.
+     * Take a look at the center pane of the borderpane in the "background.fxml" to
+     * get a grasp of the StackPane which is inside the center pane.
+     * The reason for this, is the lack of experience and I could not make it work
+     * otherwise.
+     */
     @FXML
     public StackPane centerPane;
 

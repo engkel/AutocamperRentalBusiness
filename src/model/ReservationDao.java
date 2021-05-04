@@ -3,7 +3,8 @@ package model;
 
 /**
  * This interface defines the standard operations to be performed on
- * a reservation object. Note that each implementor can
+ * a reservation object. Note that each implementor can implement all
+ * these methods in their own ways.
  */
 public interface ReservationDao {
     Reservation getReservation(int reservationId);

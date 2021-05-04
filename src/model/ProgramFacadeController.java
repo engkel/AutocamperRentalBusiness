@@ -1,19 +1,26 @@
 package model;
 
 /**
- * This class acts as a root controller for the UI controllers. This class receives
- * messages from the UI layer and performs checks and validation before delegating the
+ * This class acts as a singleton root controller for the UI controllers. This class
+ * receives messages from the UI layer and performs checks and validation before delegating the
  * requests to the domain classes.
  */
 public class ProgramFacadeController {
     private static ProgramFacadeController instance;
     private ReservationDao reservationDao;
 
-
+    /**
+     * Constructor used to initialize DAOs and other necessary requirements
+     * for the facade controller
+     */
     private ProgramFacadeController(){
         reservationDao = new ReservationDaoImpl();
     }
 
+    /**
+     * Standard method for obtaining the singleton instance
+     * @return the singleton instance
+     */
     public static ProgramFacadeController getInstance(){
         if(instance == null){
              instance = new ProgramFacadeController();
@@ -21,13 +28,18 @@ public class ProgramFacadeController {
         return instance;
     }
 
-
-    public void createReservation(long startDate, long endDate, int autocamperId) {
+    /**
+     * Creates the reservation.
+     * @param startTime Timestamp in Unix Epoch for when the booking starts
+     * @param endTime Timestamp in Unix Epoch for when the booking ends
+     * @param caravanId The ID of the caravan to check the availability of
+     */
+    public void createReservation(long startTime, long endTime, int caravanId) {
         // we could use the ReservationDaoImpl to insert into the database, but this works fine too
 
-        if(Reservation.checkAvailability(startDate,endDate,autocamperId))
+        if(Reservation.checkAvailability(startTime,endTime,caravanId))
         {
-            Reservation.addReservation(startDate,endDate,autocamperId);
+            Reservation.addReservation(startTime,endTime,caravanId);
         }
     }
 }
