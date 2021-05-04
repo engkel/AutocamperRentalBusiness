@@ -24,13 +24,10 @@ public class Main extends Application {
         // for some reason the program works better without this
         //Application.setUserAgentStylesheet(getClass().getResource("/view/program.css").toExternalForm());
 
-
-
         primaryStage.setTitle("Autocamper Secretary Software");
         primaryStage.setScene(new Scene(root, 800, 600));
         primaryStage.show();
     }
-
 
     public static void main(String[] args) {
         launch(args);
