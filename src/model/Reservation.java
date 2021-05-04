@@ -1,3 +1,5 @@
+package model;
+
 public class Reservation {
     /**
      * Checks whether or not there already is a booking that
@@ -7,7 +9,7 @@ public class Reservation {
      * @param caravanId The ID of the caravan to check the availability of
      * @return Boolean, true means the caravan is available in the given time period, false means not available.
      */
-    private boolean checkAvailability(long startTime, long endTime, int caravanId){
+    public static boolean checkAvailability(long startTime, long endTime, int caravanId){
         DB.selectSQL("SELECT ANY(*) FROM reservations WHERE fld_reservation_start_date < " + endTime + " && fld_reservation_end_date > " + startTime + " && fld_camper_id = " + caravanId);
 
         if (DB.getData().equals("true")) {
@@ -25,7 +27,7 @@ public class Reservation {
      * deposits, insurance nor
      * @return Boolean, true if the reservation was successfully added.
      */
-    static boolean addReservation(long startTime, long endTime, int caravanId) {
+    public static boolean addReservation(long startTime, long endTime, int caravanId) {
 
         //DB.insertSQL("INSERT INTO ");
         return true;

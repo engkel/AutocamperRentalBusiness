@@ -1,0 +1,82 @@
+@import url('https://fonts.googleapis.com/css?family=Varela+Round');
+
+#header{
+    -fx-background-color: #423338;
+}
+
+#header-item{
+    -fx-text-fill: #ffa200;
+    -fx-background-color: transparent;
+    -fx-font-family: 'Varela Round', sans-serif;
+    -fx-font-size: 20px;
+    -fx-font-weight: normal;
+    -fx-border-width: 0 0 3 0;
+    -fx-border-color: transparent;
+}
+
+#header-item:hover {
+    -fx-border-color: #ffa200;
+    -fx-text-fill: white;
+}
+
+#main-menu-item{
+    -fx-font-family: 'Varela Round', sans-serif;
+    -fx-font-size: 20px;
+    -fx-text-fill: white;
+    -fx-background-color: #ffa200;
+    -fx-effect: innershadow(three-pass-box, rgba(0,0,0,0.2), 0, 0, -2, -2);
+    -fx-background-radius: 10px;
+    -fx-pref-height: 80;
+    -fx-pref-width: 220;
+    -fx-padding: 0 25 0 25;
+}
+
+#main-menu-item:hover{
+    -fx-effect: innershadow(three-pass-box, rgba(0,0,0,0.2), 0, 0, -100, -100);
+}
+
+#background{
+    -fx-background-color: linear-gradient(to top, #8cb4b6, #0758cf);
+}
+
+#main-menu-background{
+    -fx-background-color: #423338;
+    -fx-opacity: 0.4;
+    -fx-background-radius: 50px;
+}
+
+#autocamper-list{
+    -fx-background-color: transparent;
+}
+
+#autocamper-list > .viewport{
+    -fx-background-color: transparent;
+}
+
+#autocamper-list > .scroll-bar:vertical{
+    -fx-background-color: transparent;
+}
+
+#autocamper-list > .scroll-bar:vertical > .thumb{
+    -fx-background-color: #396eb8;
+    -fx-opacity: 0.8;
+    -fx-background-radius: 20px;
+}
+
+
+#autocamper-list > .scroll-bar:vertical > .decrement-button > .decrement-arrow{
+    -fx-background-color: transparent;
+}
+
+#autocamper-list > .scroll-bar:vertical > .increment-button > .increment-arrow{
+    -fx-background-color: transparent;
+}
+
+#autocamper-picture{
+    -fx-background-repeat: stretch;
+}
+
+#autocamper-desc{
+    -fx-text-fill: white;
+    -fx-font-family: 'Varela Round', sans-serif;
+}
