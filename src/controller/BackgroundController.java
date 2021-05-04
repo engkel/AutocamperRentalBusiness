@@ -7,10 +7,13 @@ import javafx.scene.Parent;
 import javafx.scene.layout.BorderPane;
 import javafx.scene.layout.StackPane;
 import model.Main;
+import model.ProgramLogic;
 
 import java.io.IOException;
 
 public class BackgroundController {
+    private ProgramLogic pl = ProgramLogic.getInstance();
+
     @FXML
     public BorderPane rootPane;
 

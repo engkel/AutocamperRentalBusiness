@@ -4,9 +4,11 @@ import javafx.event.Event;
 import javafx.fxml.FXML;
 import javafx.scene.control.DatePicker;
 import javafx.scene.control.Label;
-import model.Reservation;
+import model.ProgramLogic;
 
 public class ConfirmReservationController {
+    private ProgramLogic pl = ProgramLogic.getInstance();
+
     @FXML
     public Label autocamperId;
     @FXML
@@ -21,9 +23,6 @@ public class ConfirmReservationController {
         long endDate = this.endDate.getValue().toEpochDay();
         int autocamperId = Integer.parseInt(this.autocamperId.getText());
 
-        if(Reservation.checkAvailability(startDate,endDate,autocamperId))
-        {
-            Reservation.addReservation(startDate,endDate,autocamperId);
-        }
+        pl.createReservation(startDate,endDate,autocamperId);
     }
 }

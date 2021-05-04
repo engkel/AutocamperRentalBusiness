@@ -1,6 +1,16 @@
 package model;
 
 public class Reservation {
+    private int id;
+    private long startDate;
+    private long endDate;
+
+    public Reservation(int id, long startDate, long endDate) {
+        this.id = id;
+        this.startDate = startDate;
+        this.endDate = endDate;
+    }
+
     /**
      * Checks whether or not there already is a booking that
      * overlaps with a given time period and caravan.
