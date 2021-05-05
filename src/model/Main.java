@@ -25,7 +25,7 @@ public class Main extends Application {
         //Application.setUserAgentStylesheet(getClass().getResource("/view/program.css").toExternalForm());
 
         primaryStage.setTitle("Autocamper Secretary Software");
-        primaryStage.setScene(new Scene(root, 800, 600));
+        primaryStage.setScene(new Scene(root, 950, 800));
         primaryStage.show();
     }
 
