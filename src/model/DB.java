@@ -199,7 +199,7 @@ public class DB {
 
     static {
         Properties props = new Properties();
-        String fileName = "./src/sample/db.properties";
+        String fileName = "./src/model/db.properties";
 
         try {
             InputStream input = new FileInputStream(fileName);

@@ -34,7 +34,7 @@ public class ProgramFacadeController {
      * @param endTime Timestamp in Unix Epoch for when the booking ends
      * @param caravanId The ID of the caravan to check the availability of
      */
-    public void createReservation(long startTime, long endTime, int caravanId) {
+    public void createReservation(String startTime, String endTime, int caravanId) {
         // we could use the ReservationDaoImpl to insert into the database, but this works fine too
 
         if(Reservation.checkAvailability(startTime,endTime,caravanId))

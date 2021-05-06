@@ -19,16 +19,16 @@ public class Reservation {
      * @param caravanId The ID of the caravan to check the availability of
      * @return Boolean, true means the caravan is available in the given time period, false means not available.
      */
-    public static boolean checkAvailability(long startTime, long endTime, int caravanId){
-        DB.selectSQL("SELECT ANY(*) FROM reservations WHERE fld_reservation_start_date < " + endTime + " && fld_reservation_end_date > " + startTime + " && fld_camper_id = " + caravanId);
+    public static boolean checkAvailability(String startTime, String endTime, int caravanId) {
+        DB.selectSQL("SELECT COUNT(*) FROM tbl_reservations WHERE fld_reservation_start_date < '" + endTime + "' AND fld_reservation_end_date > '" + startTime + "' AND fld_camper_id = " + caravanId);
 
-        if (DB.getData().equals("true")) {
+        if (!DB.getData().equals("0")) {
             DB.clearData();
-            return false;
+            return false; // Not available
         }
 
         DB.clearData();
-        return true;
+        return true; // Available
     }
 
 
@@ -37,7 +37,7 @@ public class Reservation {
      * deposits, insurance nor
      * @return Boolean, true if the reservation was successfully added.
      */
-    public static boolean addReservation(long startTime, long endTime, int caravanId) {
+    public static boolean addReservation(String startTime, String endTime, int caravanId) {
 
         //DB.insertSQL("INSERT INTO ");
         return true;

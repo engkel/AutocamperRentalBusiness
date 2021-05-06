@@ -27,6 +27,13 @@ public class Main extends Application {
         primaryStage.setTitle("Autocamper Secretary Software");
         primaryStage.setScene(new Scene(root, 950, 800));
         primaryStage.show();
+
+        boolean avail = Reservation.checkAvailability("2020-10-02", "2022-12-03", 1);
+        if (avail) {
+            System.out.println("This time period is available!");
+        } else {
+            System.out.println("This time period is not available!");
+        }
     }
 
     public static void main(String[] args) {

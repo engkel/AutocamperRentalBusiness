@@ -6,9 +6,9 @@ package model;
  * name implies, it uses the information of reservation objects to perform
  * operations on the database.
  */
-public class ReservationDaoImpl implements ReservationDao{
+public class ReservationDaoImpl implements ReservationDao {
 
-    public ReservationDaoImpl(){
+    public ReservationDaoImpl() {
 
     }
 

@@ -31,8 +31,8 @@ public class ConfirmReservationController {
     }
 
     public void btnHandleConfirmReservation(Event e){
-        long startDate = this.startDate.getValue().toEpochDay();
-        long endDate = this.endDate.getValue().toEpochDay();
+        String startDate = this.startDate.getValue().toString();
+        String endDate = this.endDate.getValue().toString();
         int autocamperId = Integer.parseInt(this.autocamperId.getText());
 
         pl.createReservation(startDate,endDate,autocamperId);
