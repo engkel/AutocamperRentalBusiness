@@ -39,7 +39,7 @@ public class ProgramFacadeController {
 
         if(Reservation.checkAvailability(startTime,endTime,caravanId))
         {
-            Reservation.addReservation(startTime,endTime,caravanId);
+            //Reservation.addReservation(startTime,endTime,caravanId);
         }
     }
 }

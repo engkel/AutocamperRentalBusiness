@@ -37,9 +37,21 @@ public class Reservation {
      * deposits, insurance nor
      * @return Boolean, true if the reservation was successfully added.
      */
-    public static boolean addReservation(String startTime, String endTime, int caravanId) {
-
-        //DB.insertSQL("INSERT INTO ");
+    // TODO: find discount percentage from customerId
+    public static boolean addReservation(int customerId, int camperId, int discountPercentage, String reservationStartDate, String reservationEndDate) {
+        StringBuilder sb = new StringBuilder();
+        sb.append("INSERT INTO tbl_reservations (fld_customer_id, fld_camper_id, fld_discount_percentage, fld_reservation_start_date, fld_reservation_end_date) VALUES (");
+        sb.append(customerId);
+        sb.append(", ");
+        sb.append(camperId);
+        sb.append(", ");
+        sb.append(discountPercentage);
+        sb.append(", '");
+        sb.append(reservationStartDate);
+        sb.append("', '");
+        sb.append(reservationEndDate);
+        sb.append("')");
+        DB.insertSQL(sb.toString());
         return true;
     }
 }
