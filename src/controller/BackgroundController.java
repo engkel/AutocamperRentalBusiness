@@ -2,13 +2,10 @@ package controller;
 
 import javafx.event.Event;
 import javafx.fxml.FXML;
-import javafx.fxml.FXMLLoader;
 import javafx.scene.layout.BorderPane;
 import javafx.scene.layout.StackPane;
 import model.Main;
 import model.ProgramFacadeController;
-
-import java.io.IOException;
 
 public class BackgroundController {
     private ProgramFacadeController pl = ProgramFacadeController.getInstance();
@@ -29,28 +26,25 @@ public class BackgroundController {
     @FXML
     public StackPane centerPane;
 
-    public void initialize() throws IOException {
+    public void initialize(){
         Main.centerPane = centerPane;
-        Main.mainMenu = FXMLLoader.load(getClass().getResource("/view/main-menu.fxml"));
-        Main.autocamperList = FXMLLoader.load(getClass().getResource("/view/autocamper-list.fxml"));
-        Main.confirmReservation = FXMLLoader.load(getClass().getResource("/view/confirm-reservation.fxml"));
-
-        Main.centerPane.getChildren().add(Main.mainMenu);
+        Main.centerPane.getChildren().add(Main.addReservation);
     }
 
-    public void btnHandleMain(Event e){
-        Main.setCenterPane(Main.mainMenu);
+    public void btnHandleAddReservation(Event e){
+        Main.setCenterPane(Main.addReservation);
     }
 
-    public void btnHandleLogIn(Event e){
-        
+    public void btnHandleRemoveReservation(Event e){
+        Main.setCenterPane(Main.removeReservation);
     }
 
-    public void btnHandleRegister(Event e){
-
+    public void btnHandleAddCustomer(Event e){
+        Main.setCenterPane(Main.addCustomer);
     }
 
-    public void btnHandleSupport(Event e){
-
+    public void btnHandleRemoveCustomer(Event e){
+        Main.setCenterPane(Main.removeCustomer);
     }
+
 }

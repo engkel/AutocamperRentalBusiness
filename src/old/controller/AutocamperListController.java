@@ -1,4 +1,4 @@
-package controller;
+package old.controller;
 
 import javafx.event.Event;
 import javafx.fxml.FXML;
@@ -22,6 +22,6 @@ public class AutocamperListController {
     }
 
     public void btnHandleReserve(Event e ){
-        Main.setCenterPane(Main.confirmReservation);
+        //Main.setCenterPane(Main.confirmReservation);
     }
 }

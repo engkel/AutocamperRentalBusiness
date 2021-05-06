@@ -12,7 +12,7 @@
 <?import javafx.scene.layout.StackPane?>
 <?import javafx.scene.layout.VBox?>
 
-<StackPane prefHeight="606.0" prefWidth="622.0" stylesheets="@program.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.ConfirmReservationController">
+<StackPane prefHeight="606.0" prefWidth="622.0" stylesheets="@../../view/program.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="old.controller.ConfirmReservationController">
    <children>
       <Pane id="main-menu-background" />
       <GridPane>
