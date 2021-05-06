@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+
+<StackPane prefHeight="606.0" prefWidth="622.0" stylesheets="@program.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.AddReservationController">
+   <children>
+      <Pane id="main-menu-background" />
+      <GridPane>
+         <columnConstraints>
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+            <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+         </columnConstraints>
+         <rowConstraints>
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+         </rowConstraints>
+         <children>
+            <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0">
+               <children>
+                  <Label id="autocamper-desc" text="Reservation Details" />
+                  <TextField fx:id="txtfldCustomerId" promptText="Customer Id" />
+                  <TextField fx:id="txtfldAutocamperId" layoutX="10.0" layoutY="277.0" promptText="Autocamper Id" />
+                  <TextField fx:id="txtfldStartDate" layoutX="10.0" layoutY="293.0" promptText="Start Date" />
+                  <TextField fx:id="txtfldEndDate" layoutX="10.0" layoutY="308.0" promptText="End Date" />
+                  <TextField fx:id="txtfldDiscountPercentage" layoutX="10.0" layoutY="324.0" onAction="#btnHandleConfirm" promptText="Discount Percentage" />
+               </children>
+               <GridPane.margin>
+                  <Insets bottom="25.0" left="25.0" right="25.0" top="25.0" />
+               </GridPane.margin>
+            </VBox>
+            <Button id="main-menu-item" mnemonicParsing="false" onAction="#btnHandleConfirm" text="Confirm" GridPane.columnIndex="1" />
+         </children>
+      </GridPane>
+   </children>
+</StackPane>
