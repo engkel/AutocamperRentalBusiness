@@ -9,7 +9,7 @@ import javafx.stage.Stage;
 
 public class Main extends Application {
     public static StackPane centerPane;
-    public static Parent autocamperList, confirmReservation, mainMenu;
+    public static Parent root, addCustomer, addReservation, removeCustomer, removeReservation;
 
     public static void setCenterPane(Parent ui) {
         if(!centerPane.getChildren().isEmpty()){
@@ -19,7 +19,11 @@ public class Main extends Application {
 
     @Override
     public void start(Stage primaryStage) throws Exception{
-        Parent root = FXMLLoader.load(getClass().getResource("/view/background.fxml"));
+        addCustomer = FXMLLoader.load(getClass().getResource("/view/add-customer.fxml"));
+        addReservation = FXMLLoader.load(getClass().getResource("/view/add-reservation.fxml"));
+        removeCustomer = FXMLLoader.load(getClass().getResource("/view/remove-customer.fxml"));
+        removeReservation = FXMLLoader.load(getClass().getResource("/view/remove-reservation.fxml"));
+        root = FXMLLoader.load(getClass().getResource("/view/background.fxml"));
 
         // for some reason the program works better without this
         //Application.setUserAgentStylesheet(getClass().getResource("/view/program.css").toExternalForm());
@@ -28,12 +32,12 @@ public class Main extends Application {
         primaryStage.setScene(new Scene(root, 950, 800));
         primaryStage.show();
 
-        boolean avail = Reservation.checkAvailability("2020-10-02", "2022-12-03", 1);
+        /*boolean avail = Reservation.checkAvailability("2020-10-02", "2022-12-03", 1);
         if (avail) {
             System.out.println("This time period is available!");
         } else {
             System.out.println("This time period is not available!");
-        }
+        }*/
     }
 
     public static void main(String[] args) {

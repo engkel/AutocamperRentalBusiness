@@ -10,7 +10,7 @@
    <top>
       <HBox id="header" prefHeight="100.0" prefWidth="200.0" spacing="20.0" BorderPane.alignment="CENTER">
          <children>
-            <Button id="header-item" fx:id="btnMain" maxHeight="1.7976931348623157E308" mnemonicParsing="false" onAction="#btnHandleMain" text="Main">
+            <Button id="header-item" maxHeight="1.7976931348623157E308" mnemonicParsing="false" onAction="#btnHandleAddReservation" text="Add Reservation">
                <opaqueInsets>
                   <Insets />
                </opaqueInsets>
@@ -18,17 +18,17 @@
                   <Insets />
                </HBox.margin>
             </Button>
-            <Button id="header-item" fx:id="btnLogIn" layoutX="30.0" layoutY="10.0" maxHeight="1.7976931348623157E308" mnemonicParsing="false" onAction="#btnHandleLogIn" text="Log In">
+            <Button id="header-item" layoutX="30.0" layoutY="10.0" maxHeight="1.7976931348623157E308" mnemonicParsing="false" onAction="#btnHandleRemoveReservation" text="Remove Reservation">
                <opaqueInsets>
                   <Insets />
                </opaqueInsets>
             </Button>
-            <Button id="header-item" fx:id="btnRegister" layoutX="185.0" layoutY="10.0" maxHeight="1.7976931348623157E308" mnemonicParsing="false" onAction="#btnHandleRegister" text="Register">
+            <Button id="header-item" layoutX="185.0" layoutY="10.0" maxHeight="1.7976931348623157E308" mnemonicParsing="false" onAction="#btnHandleAddCustomer" text="Add Customer">
                <opaqueInsets>
                   <Insets />
                </opaqueInsets>
             </Button>
-            <Button id="header-item" fx:id="btnSupport" layoutX="234.0" layoutY="10.0" maxHeight="1.7976931348623157E308" mnemonicParsing="false" onAction="#btnHandleSupport" text="Support">
+            <Button id="header-item" layoutX="234.0" layoutY="10.0" maxHeight="1.7976931348623157E308" mnemonicParsing="false" onAction="#btnHandleRemoveCustomer" text="Remove Customer">
                <opaqueInsets>
                   <Insets />
                </opaqueInsets>

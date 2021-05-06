@@ -8,7 +8,7 @@
 <?import javafx.scene.layout.RowConstraints?>
 <?import javafx.scene.layout.StackPane?>
 
-<StackPane prefHeight="606.0" prefWidth="622.0" stylesheets="@program.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.MainMenuController">
+<StackPane prefHeight="606.0" prefWidth="622.0" stylesheets="@../../view/program.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="old.controller.MainMenuController">
    <children>
       <Pane id="main-menu-background" maxWidth="-Infinity" prefWidth="700.0" />
       <GridPane maxWidth="-Infinity" prefWidth="700.0">
