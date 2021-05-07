@@ -29,17 +29,23 @@ public class ProgramFacadeController {
     }
 
     /**
-     * Creates the reservation.
-     * @param startTime Timestamp in Unix Epoch for when the booking starts
-     * @param endTime Timestamp in Unix Epoch for when the booking ends
-     * @param caravanId The ID of the caravan to check the availability of
+     * Creates a reservation
+     * @param customerId id of customer
+     * @param camperId id of autocamper
+     * @param discountPercentage customer discount percentage
+     * @param reservationStartDate date string
+     * @param reservationEndDate date string
      */
-    public void createReservation(String startTime, String endTime, int caravanId) {
-        // we could use the ReservationDaoImpl to insert into the database, but this works fine too
-
-        if(Reservation.checkAvailability(startTime,endTime,caravanId))
+    public void createReservation(int customerId, int camperId, int discountPercentage, String reservationStartDate, String reservationEndDate) {
+        if(Reservation.checkAvailability(reservationStartDate,reservationEndDate,camperId))
         {
-            //Reservation.addReservation(startTime,endTime,caravanId);
+            Reservation.addReservation(
+                    customerId,
+                    camperId,
+                    discountPercentage,
+                    reservationStartDate,
+                    reservationEndDate
+            );
         }
     }
 }

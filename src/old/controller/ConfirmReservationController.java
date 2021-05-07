@@ -35,6 +35,6 @@ public class ConfirmReservationController {
         String endDate = this.endDate.getValue().toString();
         int autocamperId = Integer.parseInt(this.autocamperId.getText());
 
-        pl.createReservation(startDate,endDate,autocamperId);
+        //pl.createReservation(startDate,endDate,autocamperId);
     }
 }

@@ -26,6 +26,6 @@ public class AddReservationController {
         String startDate = txtfldStartDate.getText();
         String endDate = txtfldEndDate.getText();
 
-        pfc.createReservation(startDate,endDate,autocamperId);
+        pfc.createReservation(customerId,autocamperId,discountPercentage,startDate,endDate);
     }
 }
